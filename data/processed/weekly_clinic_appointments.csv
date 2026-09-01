@@ -1,0 +1,396 @@
+ClinicID,ClinicName,WeekStart,TotalScheduled,Year,Month
+1,Nexora Care - Riverside,2024-01-01,269,2024,1
+1,Nexora Care - Riverside,2024-01-08,316,2024,1
+1,Nexora Care - Riverside,2024-01-15,261,2024,1
+1,Nexora Care - Riverside,2024-01-22,284,2024,1
+1,Nexora Care - Riverside,2024-01-29,283,2024,1
+1,Nexora Care - Riverside,2024-02-05,321,2024,2
+1,Nexora Care - Riverside,2024-02-12,322,2024,2
+1,Nexora Care - Riverside,2024-02-19,334,2024,2
+1,Nexora Care - Riverside,2024-02-26,332,2024,2
+1,Nexora Care - Riverside,2024-03-04,298,2024,3
+1,Nexora Care - Riverside,2024-03-11,302,2024,3
+1,Nexora Care - Riverside,2024-03-18,262,2024,3
+1,Nexora Care - Riverside,2024-03-25,256,2024,3
+1,Nexora Care - Riverside,2024-04-01,291,2024,4
+1,Nexora Care - Riverside,2024-04-08,317,2024,4
+1,Nexora Care - Riverside,2024-04-15,293,2024,4
+1,Nexora Care - Riverside,2024-04-22,323,2024,4
+1,Nexora Care - Riverside,2024-04-29,346,2024,4
+1,Nexora Care - Riverside,2024-05-06,297,2024,5
+1,Nexora Care - Riverside,2024-05-13,303,2024,5
+1,Nexora Care - Riverside,2024-05-20,275,2024,5
+1,Nexora Care - Riverside,2024-05-27,257,2024,5
+1,Nexora Care - Riverside,2024-06-03,282,2024,6
+1,Nexora Care - Riverside,2024-06-10,272,2024,6
+1,Nexora Care - Riverside,2024-06-17,210,2024,6
+1,Nexora Care - Riverside,2024-06-24,233,2024,6
+1,Nexora Care - Riverside,2024-07-01,225,2024,7
+1,Nexora Care - Riverside,2024-07-08,236,2024,7
+1,Nexora Care - Riverside,2024-07-15,257,2024,7
+1,Nexora Care - Riverside,2024-07-22,261,2024,7
+1,Nexora Care - Riverside,2024-07-29,254,2024,7
+1,Nexora Care - Riverside,2024-08-05,267,2024,8
+1,Nexora Care - Riverside,2024-08-12,294,2024,8
+1,Nexora Care - Riverside,2024-08-19,246,2024,8
+1,Nexora Care - Riverside,2024-08-26,205,2024,8
+1,Nexora Care - Riverside,2024-09-02,252,2024,9
+1,Nexora Care - Riverside,2024-09-09,303,2024,9
+1,Nexora Care - Riverside,2024-09-16,227,2024,9
+1,Nexora Care - Riverside,2024-09-23,231,2024,9
+1,Nexora Care - Riverside,2024-09-30,253,2024,9
+1,Nexora Care - Riverside,2024-10-07,321,2024,10
+1,Nexora Care - Riverside,2024-10-14,212,2024,10
+1,Nexora Care - Riverside,2024-10-21,254,2024,10
+1,Nexora Care - Riverside,2024-10-28,274,2024,10
+1,Nexora Care - Riverside,2024-11-04,244,2024,11
+1,Nexora Care - Riverside,2024-11-11,231,2024,11
+1,Nexora Care - Riverside,2024-11-18,249,2024,11
+1,Nexora Care - Riverside,2024-11-25,210,2024,11
+1,Nexora Care - Riverside,2024-12-02,332,2024,12
+1,Nexora Care - Riverside,2024-12-09,373,2024,12
+1,Nexora Care - Riverside,2024-12-16,331,2024,12
+1,Nexora Care - Riverside,2024-12-23,272,2024,12
+1,Nexora Care - Riverside,2024-12-30,260,2024,12
+1,Nexora Care - Riverside,2025-01-06,334,2025,1
+1,Nexora Care - Riverside,2025-01-13,353,2025,1
+1,Nexora Care - Riverside,2025-01-20,344,2025,1
+1,Nexora Care - Riverside,2025-01-27,318,2025,1
+1,Nexora Care - Riverside,2025-02-03,329,2025,2
+1,Nexora Care - Riverside,2025-02-10,321,2025,2
+1,Nexora Care - Riverside,2025-02-17,334,2025,2
+1,Nexora Care - Riverside,2025-02-24,335,2025,2
+1,Nexora Care - Riverside,2025-03-03,265,2025,3
+1,Nexora Care - Riverside,2025-03-10,300,2025,3
+1,Nexora Care - Riverside,2025-03-17,325,2025,3
+1,Nexora Care - Riverside,2025-03-24,309,2025,3
+1,Nexora Care - Riverside,2025-03-31,291,2025,3
+1,Nexora Care - Riverside,2025-04-07,295,2025,4
+1,Nexora Care - Riverside,2025-04-14,296,2025,4
+1,Nexora Care - Riverside,2025-04-21,325,2025,4
+1,Nexora Care - Riverside,2025-04-28,266,2025,4
+1,Nexora Care - Riverside,2025-05-05,317,2025,5
+1,Nexora Care - Riverside,2025-05-12,268,2025,5
+1,Nexora Care - Riverside,2025-05-19,305,2025,5
+1,Nexora Care - Riverside,2025-05-26,249,2025,5
+1,Nexora Care - Riverside,2025-06-02,217,2025,6
+1,Nexora Care - Riverside,2025-06-09,236,2025,6
+1,Nexora Care - Riverside,2025-06-16,231,2025,6
+1,Nexora Care - Riverside,2025-06-23,273,2025,6
+1,Nexora Care - Riverside,2025-06-30,265,2025,6
+1,Nexora Care - Riverside,2025-07-07,254,2025,7
+1,Nexora Care - Riverside,2025-07-14,256,2025,7
+1,Nexora Care - Riverside,2025-07-21,232,2025,7
+1,Nexora Care - Riverside,2025-07-28,252,2025,7
+1,Nexora Care - Riverside,2025-08-04,282,2025,8
+1,Nexora Care - Riverside,2025-08-11,274,2025,8
+1,Nexora Care - Riverside,2025-08-18,275,2025,8
+1,Nexora Care - Riverside,2025-08-25,296,2025,8
+1,Nexora Care - Riverside,2025-09-01,262,2025,9
+1,Nexora Care - Riverside,2025-09-08,285,2025,9
+1,Nexora Care - Riverside,2025-09-15,260,2025,9
+1,Nexora Care - Riverside,2025-09-22,259,2025,9
+1,Nexora Care - Riverside,2025-09-29,251,2025,9
+1,Nexora Care - Riverside,2025-10-06,229,2025,10
+1,Nexora Care - Riverside,2025-10-13,260,2025,10
+1,Nexora Care - Riverside,2025-10-20,284,2025,10
+1,Nexora Care - Riverside,2025-10-27,306,2025,10
+1,Nexora Care - Riverside,2025-11-03,255,2025,11
+1,Nexora Care - Riverside,2025-11-10,255,2025,11
+1,Nexora Care - Riverside,2025-11-17,293,2025,11
+1,Nexora Care - Riverside,2025-11-24,218,2025,11
+1,Nexora Care - Riverside,2025-12-01,362,2025,12
+1,Nexora Care - Riverside,2025-12-08,382,2025,12
+1,Nexora Care - Riverside,2025-12-15,348,2025,12
+1,Nexora Care - Riverside,2025-12-22,290,2025,12
+1,Nexora Care - Riverside,2025-12-29,148,2025,12
+2,Nexora Care - Lakeside,2024-01-01,379,2024,1
+2,Nexora Care - Lakeside,2024-01-08,437,2024,1
+2,Nexora Care - Lakeside,2024-01-15,372,2024,1
+2,Nexora Care - Lakeside,2024-01-22,526,2024,1
+2,Nexora Care - Lakeside,2024-01-29,538,2024,1
+2,Nexora Care - Lakeside,2024-02-05,468,2024,2
+2,Nexora Care - Lakeside,2024-02-12,476,2024,2
+2,Nexora Care - Lakeside,2024-02-19,417,2024,2
+2,Nexora Care - Lakeside,2024-02-26,465,2024,2
+2,Nexora Care - Lakeside,2024-03-04,404,2024,3
+2,Nexora Care - Lakeside,2024-03-11,421,2024,3
+2,Nexora Care - Lakeside,2024-03-18,359,2024,3
+2,Nexora Care - Lakeside,2024-03-25,469,2024,3
+2,Nexora Care - Lakeside,2024-04-01,454,2024,4
+2,Nexora Care - Lakeside,2024-04-08,450,2024,4
+2,Nexora Care - Lakeside,2024-04-15,448,2024,4
+2,Nexora Care - Lakeside,2024-04-22,451,2024,4
+2,Nexora Care - Lakeside,2024-04-29,480,2024,4
+2,Nexora Care - Lakeside,2024-05-06,395,2024,5
+2,Nexora Care - Lakeside,2024-05-13,425,2024,5
+2,Nexora Care - Lakeside,2024-05-20,389,2024,5
+2,Nexora Care - Lakeside,2024-05-27,352,2024,5
+2,Nexora Care - Lakeside,2024-06-03,334,2024,6
+2,Nexora Care - Lakeside,2024-06-10,365,2024,6
+2,Nexora Care - Lakeside,2024-06-17,356,2024,6
+2,Nexora Care - Lakeside,2024-06-24,428,2024,6
+2,Nexora Care - Lakeside,2024-07-01,347,2024,7
+2,Nexora Care - Lakeside,2024-07-08,385,2024,7
+2,Nexora Care - Lakeside,2024-07-15,354,2024,7
+2,Nexora Care - Lakeside,2024-07-22,442,2024,7
+2,Nexora Care - Lakeside,2024-07-29,381,2024,7
+2,Nexora Care - Lakeside,2024-08-05,384,2024,8
+2,Nexora Care - Lakeside,2024-08-12,425,2024,8
+2,Nexora Care - Lakeside,2024-08-19,422,2024,8
+2,Nexora Care - Lakeside,2024-08-26,404,2024,8
+2,Nexora Care - Lakeside,2024-09-02,384,2024,9
+2,Nexora Care - Lakeside,2024-09-09,411,2024,9
+2,Nexora Care - Lakeside,2024-09-16,396,2024,9
+2,Nexora Care - Lakeside,2024-09-23,368,2024,9
+2,Nexora Care - Lakeside,2024-09-30,428,2024,9
+2,Nexora Care - Lakeside,2024-10-07,402,2024,10
+2,Nexora Care - Lakeside,2024-10-14,372,2024,10
+2,Nexora Care - Lakeside,2024-10-21,427,2024,10
+2,Nexora Care - Lakeside,2024-10-28,417,2024,10
+2,Nexora Care - Lakeside,2024-11-04,429,2024,11
+2,Nexora Care - Lakeside,2024-11-11,374,2024,11
+2,Nexora Care - Lakeside,2024-11-18,357,2024,11
+2,Nexora Care - Lakeside,2024-11-25,303,2024,11
+2,Nexora Care - Lakeside,2024-12-02,584,2024,12
+2,Nexora Care - Lakeside,2024-12-09,523,2024,12
+2,Nexora Care - Lakeside,2024-12-16,528,2024,12
+2,Nexora Care - Lakeside,2024-12-23,297,2024,12
+2,Nexora Care - Lakeside,2024-12-30,371,2024,12
+2,Nexora Care - Lakeside,2025-01-06,580,2025,1
+2,Nexora Care - Lakeside,2025-01-13,499,2025,1
+2,Nexora Care - Lakeside,2025-01-20,404,2025,1
+2,Nexora Care - Lakeside,2025-01-27,488,2025,1
+2,Nexora Care - Lakeside,2025-02-03,489,2025,2
+2,Nexora Care - Lakeside,2025-02-10,609,2025,2
+2,Nexora Care - Lakeside,2025-02-17,486,2025,2
+2,Nexora Care - Lakeside,2025-02-24,512,2025,2
+2,Nexora Care - Lakeside,2025-03-03,512,2025,3
+2,Nexora Care - Lakeside,2025-03-10,499,2025,3
+2,Nexora Care - Lakeside,2025-03-17,481,2025,3
+2,Nexora Care - Lakeside,2025-03-24,460,2025,3
+2,Nexora Care - Lakeside,2025-03-31,444,2025,3
+2,Nexora Care - Lakeside,2025-04-07,453,2025,4
+2,Nexora Care - Lakeside,2025-04-14,471,2025,4
+2,Nexora Care - Lakeside,2025-04-21,513,2025,4
+2,Nexora Care - Lakeside,2025-04-28,507,2025,4
+2,Nexora Care - Lakeside,2025-05-05,446,2025,5
+2,Nexora Care - Lakeside,2025-05-12,417,2025,5
+2,Nexora Care - Lakeside,2025-05-19,473,2025,5
+2,Nexora Care - Lakeside,2025-05-26,479,2025,5
+2,Nexora Care - Lakeside,2025-06-02,441,2025,6
+2,Nexora Care - Lakeside,2025-06-09,413,2025,6
+2,Nexora Care - Lakeside,2025-06-16,347,2025,6
+2,Nexora Care - Lakeside,2025-06-23,429,2025,6
+2,Nexora Care - Lakeside,2025-06-30,429,2025,6
+2,Nexora Care - Lakeside,2025-07-07,398,2025,7
+2,Nexora Care - Lakeside,2025-07-14,379,2025,7
+2,Nexora Care - Lakeside,2025-07-21,352,2025,7
+2,Nexora Care - Lakeside,2025-07-28,376,2025,7
+2,Nexora Care - Lakeside,2025-08-04,423,2025,8
+2,Nexora Care - Lakeside,2025-08-11,494,2025,8
+2,Nexora Care - Lakeside,2025-08-18,492,2025,8
+2,Nexora Care - Lakeside,2025-08-25,482,2025,8
+2,Nexora Care - Lakeside,2025-09-01,481,2025,9
+2,Nexora Care - Lakeside,2025-09-08,496,2025,9
+2,Nexora Care - Lakeside,2025-09-15,428,2025,9
+2,Nexora Care - Lakeside,2025-09-22,473,2025,9
+2,Nexora Care - Lakeside,2025-09-29,412,2025,9
+2,Nexora Care - Lakeside,2025-10-06,478,2025,10
+2,Nexora Care - Lakeside,2025-10-13,457,2025,10
+2,Nexora Care - Lakeside,2025-10-20,462,2025,10
+2,Nexora Care - Lakeside,2025-10-27,468,2025,10
+2,Nexora Care - Lakeside,2025-11-03,445,2025,11
+2,Nexora Care - Lakeside,2025-11-10,339,2025,11
+2,Nexora Care - Lakeside,2025-11-17,489,2025,11
+2,Nexora Care - Lakeside,2025-11-24,322,2025,11
+2,Nexora Care - Lakeside,2025-12-01,543,2025,12
+2,Nexora Care - Lakeside,2025-12-08,595,2025,12
+2,Nexora Care - Lakeside,2025-12-15,494,2025,12
+2,Nexora Care - Lakeside,2025-12-22,411,2025,12
+2,Nexora Care - Lakeside,2025-12-29,238,2025,12
+3,Nexora Care - Downtown Express,2024-01-01,151,2024,1
+3,Nexora Care - Downtown Express,2024-01-08,219,2024,1
+3,Nexora Care - Downtown Express,2024-01-15,196,2024,1
+3,Nexora Care - Downtown Express,2024-01-22,174,2024,1
+3,Nexora Care - Downtown Express,2024-01-29,196,2024,1
+3,Nexora Care - Downtown Express,2024-02-05,221,2024,2
+3,Nexora Care - Downtown Express,2024-02-12,189,2024,2
+3,Nexora Care - Downtown Express,2024-02-19,182,2024,2
+3,Nexora Care - Downtown Express,2024-02-26,201,2024,2
+3,Nexora Care - Downtown Express,2024-03-04,199,2024,3
+3,Nexora Care - Downtown Express,2024-03-11,220,2024,3
+3,Nexora Care - Downtown Express,2024-03-18,170,2024,3
+3,Nexora Care - Downtown Express,2024-03-25,198,2024,3
+3,Nexora Care - Downtown Express,2024-04-01,227,2024,4
+3,Nexora Care - Downtown Express,2024-04-08,205,2024,4
+3,Nexora Care - Downtown Express,2024-04-15,229,2024,4
+3,Nexora Care - Downtown Express,2024-04-22,183,2024,4
+3,Nexora Care - Downtown Express,2024-04-29,203,2024,4
+3,Nexora Care - Downtown Express,2024-05-06,218,2024,5
+3,Nexora Care - Downtown Express,2024-05-13,247,2024,5
+3,Nexora Care - Downtown Express,2024-05-20,202,2024,5
+3,Nexora Care - Downtown Express,2024-05-27,177,2024,5
+3,Nexora Care - Downtown Express,2024-06-03,186,2024,6
+3,Nexora Care - Downtown Express,2024-06-10,192,2024,6
+3,Nexora Care - Downtown Express,2024-06-17,182,2024,6
+3,Nexora Care - Downtown Express,2024-06-24,216,2024,6
+3,Nexora Care - Downtown Express,2024-07-01,169,2024,7
+3,Nexora Care - Downtown Express,2024-07-08,213,2024,7
+3,Nexora Care - Downtown Express,2024-07-15,200,2024,7
+3,Nexora Care - Downtown Express,2024-07-22,217,2024,7
+3,Nexora Care - Downtown Express,2024-07-29,224,2024,7
+3,Nexora Care - Downtown Express,2024-08-05,195,2024,8
+3,Nexora Care - Downtown Express,2024-08-12,230,2024,8
+3,Nexora Care - Downtown Express,2024-08-19,239,2024,8
+3,Nexora Care - Downtown Express,2024-08-26,234,2024,8
+3,Nexora Care - Downtown Express,2024-09-02,201,2024,9
+3,Nexora Care - Downtown Express,2024-09-09,244,2024,9
+3,Nexora Care - Downtown Express,2024-09-16,228,2024,9
+3,Nexora Care - Downtown Express,2024-09-23,202,2024,9
+3,Nexora Care - Downtown Express,2024-09-30,235,2024,9
+3,Nexora Care - Downtown Express,2024-10-07,232,2024,10
+3,Nexora Care - Downtown Express,2024-10-14,266,2024,10
+3,Nexora Care - Downtown Express,2024-10-21,213,2024,10
+3,Nexora Care - Downtown Express,2024-10-28,242,2024,10
+3,Nexora Care - Downtown Express,2024-11-04,252,2024,11
+3,Nexora Care - Downtown Express,2024-11-11,204,2024,11
+3,Nexora Care - Downtown Express,2024-11-18,229,2024,11
+3,Nexora Care - Downtown Express,2024-11-25,190,2024,11
+3,Nexora Care - Downtown Express,2024-12-02,231,2024,12
+3,Nexora Care - Downtown Express,2024-12-09,269,2024,12
+3,Nexora Care - Downtown Express,2024-12-16,301,2024,12
+3,Nexora Care - Downtown Express,2024-12-23,230,2024,12
+3,Nexora Care - Downtown Express,2024-12-30,203,2024,12
+3,Nexora Care - Downtown Express,2025-01-06,285,2025,1
+3,Nexora Care - Downtown Express,2025-01-13,230,2025,1
+3,Nexora Care - Downtown Express,2025-01-20,242,2025,1
+3,Nexora Care - Downtown Express,2025-01-27,239,2025,1
+3,Nexora Care - Downtown Express,2025-02-03,290,2025,2
+3,Nexora Care - Downtown Express,2025-02-10,280,2025,2
+3,Nexora Care - Downtown Express,2025-02-17,248,2025,2
+3,Nexora Care - Downtown Express,2025-02-24,261,2025,2
+3,Nexora Care - Downtown Express,2025-03-03,274,2025,3
+3,Nexora Care - Downtown Express,2025-03-10,281,2025,3
+3,Nexora Care - Downtown Express,2025-03-17,264,2025,3
+3,Nexora Care - Downtown Express,2025-03-24,250,2025,3
+3,Nexora Care - Downtown Express,2025-03-31,269,2025,3
+3,Nexora Care - Downtown Express,2025-04-07,275,2025,4
+3,Nexora Care - Downtown Express,2025-04-14,279,2025,4
+3,Nexora Care - Downtown Express,2025-04-21,250,2025,4
+3,Nexora Care - Downtown Express,2025-04-28,269,2025,4
+3,Nexora Care - Downtown Express,2025-05-05,237,2025,5
+3,Nexora Care - Downtown Express,2025-05-12,268,2025,5
+3,Nexora Care - Downtown Express,2025-05-19,281,2025,5
+3,Nexora Care - Downtown Express,2025-05-26,257,2025,5
+3,Nexora Care - Downtown Express,2025-06-02,287,2025,6
+3,Nexora Care - Downtown Express,2025-06-09,222,2025,6
+3,Nexora Care - Downtown Express,2025-06-16,246,2025,6
+3,Nexora Care - Downtown Express,2025-06-23,274,2025,6
+3,Nexora Care - Downtown Express,2025-06-30,233,2025,6
+3,Nexora Care - Downtown Express,2025-07-07,250,2025,7
+3,Nexora Care - Downtown Express,2025-07-14,263,2025,7
+3,Nexora Care - Downtown Express,2025-07-21,299,2025,7
+3,Nexora Care - Downtown Express,2025-07-28,227,2025,7
+3,Nexora Care - Downtown Express,2025-08-04,286,2025,8
+3,Nexora Care - Downtown Express,2025-08-11,266,2025,8
+3,Nexora Care - Downtown Express,2025-08-18,282,2025,8
+3,Nexora Care - Downtown Express,2025-08-25,302,2025,8
+3,Nexora Care - Downtown Express,2025-09-01,259,2025,9
+3,Nexora Care - Downtown Express,2025-09-08,264,2025,9
+3,Nexora Care - Downtown Express,2025-09-15,299,2025,9
+3,Nexora Care - Downtown Express,2025-09-22,265,2025,9
+3,Nexora Care - Downtown Express,2025-09-29,274,2025,9
+3,Nexora Care - Downtown Express,2025-10-06,283,2025,10
+3,Nexora Care - Downtown Express,2025-10-13,328,2025,10
+3,Nexora Care - Downtown Express,2025-10-20,267,2025,10
+3,Nexora Care - Downtown Express,2025-10-27,258,2025,10
+3,Nexora Care - Downtown Express,2025-11-03,291,2025,11
+3,Nexora Care - Downtown Express,2025-11-10,297,2025,11
+3,Nexora Care - Downtown Express,2025-11-17,276,2025,11
+3,Nexora Care - Downtown Express,2025-11-24,236,2025,11
+3,Nexora Care - Downtown Express,2025-12-01,322,2025,12
+3,Nexora Care - Downtown Express,2025-12-08,363,2025,12
+3,Nexora Care - Downtown Express,2025-12-15,300,2025,12
+3,Nexora Care - Downtown Express,2025-12-22,211,2025,12
+3,Nexora Care - Downtown Express,2025-12-29,111,2025,12
+4,Nexora Care - Hillcrest,2024-06-24,14,2024,6
+4,Nexora Care - Hillcrest,2024-07-01,323,2024,7
+4,Nexora Care - Hillcrest,2024-07-08,318,2024,7
+4,Nexora Care - Hillcrest,2024-07-15,291,2024,7
+4,Nexora Care - Hillcrest,2024-07-22,276,2024,7
+4,Nexora Care - Hillcrest,2024-07-29,291,2024,7
+4,Nexora Care - Hillcrest,2024-08-05,338,2024,8
+4,Nexora Care - Hillcrest,2024-08-12,357,2024,8
+4,Nexora Care - Hillcrest,2024-08-19,308,2024,8
+4,Nexora Care - Hillcrest,2024-08-26,313,2024,8
+4,Nexora Care - Hillcrest,2024-09-02,318,2024,9
+4,Nexora Care - Hillcrest,2024-09-09,312,2024,9
+4,Nexora Care - Hillcrest,2024-09-16,323,2024,9
+4,Nexora Care - Hillcrest,2024-09-23,271,2024,9
+4,Nexora Care - Hillcrest,2024-09-30,313,2024,9
+4,Nexora Care - Hillcrest,2024-10-07,332,2024,10
+4,Nexora Care - Hillcrest,2024-10-14,374,2024,10
+4,Nexora Care - Hillcrest,2024-10-21,320,2024,10
+4,Nexora Care - Hillcrest,2024-10-28,320,2024,10
+4,Nexora Care - Hillcrest,2024-11-04,337,2024,11
+4,Nexora Care - Hillcrest,2024-11-11,271,2024,11
+4,Nexora Care - Hillcrest,2024-11-18,330,2024,11
+4,Nexora Care - Hillcrest,2024-11-25,195,2024,11
+4,Nexora Care - Hillcrest,2024-12-02,412,2024,12
+4,Nexora Care - Hillcrest,2024-12-09,405,2024,12
+4,Nexora Care - Hillcrest,2024-12-16,440,2024,12
+4,Nexora Care - Hillcrest,2024-12-23,272,2024,12
+4,Nexora Care - Hillcrest,2024-12-30,285,2024,12
+4,Nexora Care - Hillcrest,2025-01-06,482,2025,1
+4,Nexora Care - Hillcrest,2025-01-13,528,2025,1
+4,Nexora Care - Hillcrest,2025-01-20,406,2025,1
+4,Nexora Care - Hillcrest,2025-01-27,387,2025,1
+4,Nexora Care - Hillcrest,2025-02-03,418,2025,2
+4,Nexora Care - Hillcrest,2025-02-10,440,2025,2
+4,Nexora Care - Hillcrest,2025-02-17,397,2025,2
+4,Nexora Care - Hillcrest,2025-02-24,421,2025,2
+4,Nexora Care - Hillcrest,2025-03-03,385,2025,3
+4,Nexora Care - Hillcrest,2025-03-10,408,2025,3
+4,Nexora Care - Hillcrest,2025-03-17,362,2025,3
+4,Nexora Care - Hillcrest,2025-03-24,356,2025,3
+4,Nexora Care - Hillcrest,2025-03-31,445,2025,3
+4,Nexora Care - Hillcrest,2025-04-07,376,2025,4
+4,Nexora Care - Hillcrest,2025-04-14,449,2025,4
+4,Nexora Care - Hillcrest,2025-04-21,386,2025,4
+4,Nexora Care - Hillcrest,2025-04-28,390,2025,4
+4,Nexora Care - Hillcrest,2025-05-05,393,2025,5
+4,Nexora Care - Hillcrest,2025-05-12,408,2025,5
+4,Nexora Care - Hillcrest,2025-05-19,375,2025,5
+4,Nexora Care - Hillcrest,2025-05-26,356,2025,5
+4,Nexora Care - Hillcrest,2025-06-02,398,2025,6
+4,Nexora Care - Hillcrest,2025-06-09,413,2025,6
+4,Nexora Care - Hillcrest,2025-06-16,355,2025,6
+4,Nexora Care - Hillcrest,2025-06-23,415,2025,6
+4,Nexora Care - Hillcrest,2025-06-30,325,2025,6
+4,Nexora Care - Hillcrest,2025-07-07,367,2025,7
+4,Nexora Care - Hillcrest,2025-07-14,408,2025,7
+4,Nexora Care - Hillcrest,2025-07-21,338,2025,7
+4,Nexora Care - Hillcrest,2025-07-28,391,2025,7
+4,Nexora Care - Hillcrest,2025-08-04,330,2025,8
+4,Nexora Care - Hillcrest,2025-08-11,359,2025,8
+4,Nexora Care - Hillcrest,2025-08-18,421,2025,8
+4,Nexora Care - Hillcrest,2025-08-25,365,2025,8
+4,Nexora Care - Hillcrest,2025-09-01,369,2025,9
+4,Nexora Care - Hillcrest,2025-09-08,408,2025,9
+4,Nexora Care - Hillcrest,2025-09-15,358,2025,9
+4,Nexora Care - Hillcrest,2025-09-22,430,2025,9
+4,Nexora Care - Hillcrest,2025-09-29,361,2025,9
+4,Nexora Care - Hillcrest,2025-10-06,384,2025,10
+4,Nexora Care - Hillcrest,2025-10-13,364,2025,10
+4,Nexora Care - Hillcrest,2025-10-20,404,2025,10
+4,Nexora Care - Hillcrest,2025-10-27,364,2025,10
+4,Nexora Care - Hillcrest,2025-11-03,399,2025,11
+4,Nexora Care - Hillcrest,2025-11-10,373,2025,11
+4,Nexora Care - Hillcrest,2025-11-17,420,2025,11
+4,Nexora Care - Hillcrest,2025-11-24,321,2025,11
+4,Nexora Care - Hillcrest,2025-12-01,484,2025,12
+4,Nexora Care - Hillcrest,2025-12-08,505,2025,12
+4,Nexora Care - Hillcrest,2025-12-15,541,2025,12
+4,Nexora Care - Hillcrest,2025-12-22,336,2025,12
+4,Nexora Care - Hillcrest,2025-12-29,211,2025,12
