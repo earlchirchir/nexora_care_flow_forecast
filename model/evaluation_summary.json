@@ -1,0 +1,27 @@
+{
+  "champion_model": "GradientBoostingRegressor",
+  "evaluation_metrics": {
+    "naive_baseline": {
+      "mape": 20.73,
+      "rmse": 89.02
+    },
+    "random_forest": {
+      "mape": 19.68,
+      "rmse": 77.24
+    },
+    "gradient_boosting": {
+      "mape": 18.55,
+      "rmse": 72.65
+    }
+  },
+  "features": [
+    "lag_4w",
+    "lag_1w",
+    "lag_2w",
+    "rolling_mean_4w",
+    "Month_Sin",
+    "Month_Cos",
+    "Is_Flu_Season",
+    "Is_Holiday_Week"
+  ]
+}
