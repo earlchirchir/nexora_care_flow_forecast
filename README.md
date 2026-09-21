@@ -1,186 +1,146 @@
-# 🏥 Nexora Care Flow: Patient Demand Forecasting & Operational Staffing
+# Nexora Care Flow
 
-> An end-to-end healthcare data science solution that predicts outpatient clinic appointment demand and dynamically optimizes Doctor and Nurse staffing allocations across regional medical centers.
+Outpatient Appointment Demand Forecasting and Clinical Staffing Allocation
 
----
+## Overview
 
-## 📌 Executive Summary
+Nexora Care Flow is a time-series forecasting and workforce planning system built for outpatient healthcare networks. Operating across four regional facilities (Riverside, Lakeside, Northside, and West End), the project addresses common inefficiencies in clinical scheduling:
 
-**Nexora Health** operates 4 regional outpatient clinics:
-- **Riverside Medical Center** (Clinic 1, Large)
-- **Lakeside Health Hub** (Clinic 2, Medium)
-- **Northside Family Clinic** (Clinic 3, Medium)
-- **West End Wellness Center** (Clinic 4, Small)
+- Overstaffing during low-demand periods, which increases operating costs.
+- Understaffing during peak volume periods (such as Mondays and winter flu season), which leads to extended patient wait times and staff burnout.
 
-Clinic operations historically struggled with a persistent resource mismatch:
-1. **Overstaffing on slow days** wasted clinical payroll and left healthcare professionals idle.
-2. **Understaffing during peak demand** (Monday surges and winter flu season) resulted in excessive patient wait times, clinician burnout, and compromised care quality.
+The system processes 129,000+ Electronic Health Records (EHR) from 2024 through 2025, builds predictive temporal features, trains gradient boosted forecasting models, and maps weekly appointment projections to required Doctor and Nurse Full-Time Equivalents (FTEs).
 
-**Nexora Care Flow** replaces static scheduling with an automated, data-driven machine learning pipeline. The system audits 129,000+ Electronic Health Records, engineers temporal and seasonal features, forecasts weekly patient demand using a champion Gradient Boosting model (18.55% MAPE), and converts volume predictions into actionable Doctor and Nurse Full-Time Equivalent (FTE) rosters.
+## System Architecture
 
----
-
-## 🏗️ System Architecture & Production Workflow
-
-The diagram below illustrates the end-to-end data pipeline, machine learning engine, operational staffing translation, and governance monitoring loop:
+The end-to-end pipeline consists of three core operational layers: data ingestion and transformation, predictive modeling, and operational staffing with governance monitoring.
 
 ![Nexora Care Flow Production Architecture](notebooks/production_architecture_flowchart.svg)
 
-The production architecture is organized into three distinct layers:
-1. **Layer 1: Data & Feature Pipeline**:
-   - Ingests raw appointment logs nightly from the Electronic Health Records (EHR) database.
-   - Cleans records, standardizes dates, and aggregates data into daily (2,924 rows) and weekly (420 rows) time series.
-   - Computes temporal lag features (`lag_1w`, `lag_2w`, `lag_4w`), moving averages (`rolling_mean_4w`), cyclical calendar coordinates, and seasonal event flags.
-2. **Layer 2: Clinical Operations & Staffing**:
-   - The champion Gradient Boosting Regressor generates a 4-week rolling volume forecast per clinic.
-   - The staffing engine applies clinical capacity formulas to compute required Doctor and Nurse headcounts.
-   - A weekly staffing bulletin (`staffing_guidance_holdout.csv`) is published for clinic practice managers and shift schedulers.
-3. **Layer 3: Governance & Automated Drift Monitoring**:
-   - Weekly error telemetry monitors forecast accuracy against actual patient visits.
-   - A drift detection rule triggers an automated retraining pipeline whenever the Mean Absolute Percentage Error (MAPE) exceeds 18.0% for 3 consecutive weeks.
+1. Data and Feature Layer:
+   - Daily extraction and cleaning of appointment records from the central EHR database.
+   - Aggregation into clinic-level daily (2,924 rows) and weekly (420 rows) time series.
+   - Construction of lag terms (1, 2, and 4 weeks), 4-week rolling averages, cyclical calendar signals (sine/cosine of month), and binary flags for flu season and holidays.
 
----
+2. Modeling and Operations Layer:
+   - Inference via a trained Gradient Boosting Regressor predicting 4 weeks ahead.
+   - Conversion of volume forecasts into Doctor FTEs (40 visits per week capacity) and Nurse FTEs (1.5 ratio per doctor).
+   - Generation of weekly scheduling guidance tables with operational buffer alerts (+/-15% variance).
 
-## 📖 Project Chapters & Notebook Roadmap
+3. Governance and Retraining Layer:
+   - Continuous comparison of weekly forecasts against verified patient volume.
+   - Automated model retraining triggered when Mean Absolute Percentage Error (MAPE) exceeds 18.0% across three consecutive weeks.
 
-The repository is structured into 6 sequential, fully executed Jupyter Notebooks located in the [`notebooks/`](notebooks/) directory:
+## Workflow and Notebooks
 
-| Chapter / Notebook | Core Objective | Key Output / Metric |
+The analysis is documented across six sequential notebooks in the `notebooks/` directory:
+
+| Notebook | Focus | Primary Outputs |
 | :--- | :--- | :--- |
-| **[01_data_cleaning.ipynb](notebooks/01_data_cleaning.ipynb)** | Audits raw EHR records, handles missing data, and standardizes datetimes. | `cleaned_appointments.csv` (129,353 rows)<br>`weekly_clinic_appointments.csv` (420 rows) |
-| **[02_EDA.ipynb](notebooks/02_EDA.ipynb)** | Discovers demand patterns, day-of-week surges, and annual flu seasonality. | Identifies +32% Monday surge, +24.5% flu spike, -45% holiday volume drop |
-| **[03_feature_eng.ipynb](notebooks/03_feature_eng.ipynb)** | Engineers time-series lags, rolling trends, cyclical months, and flu flags. | `weekly_features.csv` (379 clean feature rows) |
-| **[04_model_development.ipynb](notebooks/04_model_development.ipynb)** | Trains and benchmarks Naive Baseline, Random Forest, and Gradient Boosting. | **Champion GBR**: **18.55% MAPE**, **72.65 RMSE**<br>`model/weekly_forecasting_model.pkl` |
-| **[05_staffing_guidance.ipynb](notebooks/05_staffing_guidance.ipynb)** | Converts volume forecasts into Doctor and Nurse FTE staffing schedules. | **70.3% Optimal Capacity** weeks<br>`data/processed/staffing_guidance_holdout.csv` |
-| **[06_model_refresh_documentation.ipynb](notebooks/06_model_refresh_documentation.ipynb)** | Defines MLOps governance, retraining cadences, and drift detection rules. | Production SLAs, drift prototype, and deliverables catalog |
+| [01_data_cleaning.ipynb](notebooks/01_data_cleaning.ipynb) | Data audit, missing value imputation, record deduplication | `cleaned_appointments.csv`<br>`weekly_clinic_appointments.csv` |
+| [02_EDA.ipynb](notebooks/02_EDA.ipynb) | Day-of-week patterns, seasonality, and volume distributions | Quantified Monday surges, flu season curves, and holiday dips |
+| [03_feature_eng.ipynb](notebooks/03_feature_eng.ipynb) | Feature generation (lags, rolling stats, cyclical encoding) | `weekly_features.csv` (379 clean observations) |
+| [04_model_development.ipynb](notebooks/04_model_development.ipynb) | Chronological train/test split, model benchmarking, evaluation | Trained model artifact (`weekly_forecasting_model.pkl`)<br>Evaluation scorecard (`evaluation_summary.json`) |
+| [05_staffing_guidance.ipynb](notebooks/05_staffing_guidance.ipynb) | Translation of demand forecasts to Doctor and Nurse FTEs | `staffing_guidance_holdout.csv`<br>Capacity alert classifications |
+| [06_model_refresh_documentation.ipynb](notebooks/06_model_refresh_documentation.ipynb) | Governance protocols, retraining triggers, architecture mapping | Production runbook and drift detection implementation |
 
----
+## Key Findings from Exploratory Analysis
 
-## 📊 Key Operational Discoveries (Exploratory Analysis)
+Analysis of appointment patterns over the 2024–2025 period highlighted three operational factors:
 
-Exploratory Data Analysis across 2 full operating years (Jan 2024 – Dec 2025) revealed three primary operational patterns:
+1. Monday Demand Spike: Mondays average 32% higher appointment volume than Fridays. Scheduling practices should allocate additional clinical hours early in the week rather than maintaining equal daily coverage.
+2. Winter Seasonality: Total appointments rise by approximately 24.5% between October and February each year due to seasonal respiratory infections.
+3. Holiday Reductions: Weeks containing Thanksgiving (Week 47) and Christmas (Week 52) show volume reductions of 40% to 50%, followed by an immediate rebound in early January.
 
-1. **The Monday Surge (+32% Volume)**:
-   - Mondays consistently experience 32% higher appointment volume than Fridays due to symptom buildup over the weekend.
-   - *Operational Action*: Shift staffing allocations toward early-week coverage rather than flat daily staffing.
-2. **Q4 Winter Flu Season (+24.5% Volume)**:
-   - Weekly demand rises steadily from October through February, driven by respiratory illnesses.
-   - *Operational Action*: Schedule seasonal float pool nurses and extend temporary physician hours from October to February.
-3. **Holiday Dips & Sudden Rebounds (-45% to -58%)**:
-   - Thanksgiving (ISO Week 47) and Christmas/New Year (ISO Week 52) experience severe drops in elective appointments, followed by sharp Week 1 rebounds.
-   - *Operational Action*: Avoid over-scheduling clinicians during major holiday weeks while preparing for immediate post-holiday volume surges.
+## Model Benchmarking and Evaluation
 
----
+Models were evaluated using a chronological holdout validation set covering Q4 2025 (64 clinic-weeks across all four facilities). Shuffling was deliberately avoided to eliminate temporal data leakage.
 
-## 🤖 Model Development & Benchmarking Results
-
-Models were evaluated chronologically on an unseen holdout validation set covering Q4 2025 (64 clinic-weeks across all 4 clinics during the demanding flu season):
-
-| Model / Approach | Category | MAPE (%) | RMSE (Appointments) | Performance vs Baseline |
+| Model | Approach | MAPE (%) | RMSE (Visits) | Assessment |
 | :--- | :--- | :---: | :---: | :--- |
-| **Naive Baseline (`lag_4w`)** | Rule-Based Heuristic | **20.73%** | **89.02** | *Legacy Status Quo* (lags seasonal transitions by 4 weeks) |
-| **Random Forest Regressor** | Bagging Ensemble (100 Trees) | **19.68%** | **77.24** | **-1.05% MAPE**, **-11.78 RMSE** (-13.2% error reduction) |
-| **Gradient Boosting Regressor (Champion) 🏆** | Boosting Ensemble (100 Trees) | **18.55%** | **72.65** | **-2.18% MAPE**, **-16.37 RMSE** (-18.4% error reduction) |
+| Naive Baseline (`lag_4w`) | Same-week-last-month heuristic | 20.73% | 89.02 | Benchmark reflecting manual scheduling practices |
+| Random Forest | Bagging ensemble (100 trees) | 19.68% | 77.24 | Reduced variance, moderate fit on turning points |
+| Gradient Boosting | Sequential boosting (100 trees) | 18.55% | 72.65 | Selected champion; lowest overall error on seasonal swings |
 
-### Predictive Drivers (Feature Importance)
-Feature importance audits of the champion Gradient Boosting model demonstrated that:
-- **`lag_1w`** (immediate prior-week volume) and **`rolling_mean_4w`** (smoothed 4-week demand baseline) provide over 80% of predictive power.
-- **`Is_Flu_Season`** and calendar signals (`Month_Cos`) calibrate the model for winter volume influxes.
+Feature importance analysis indicates that the immediate prior week volume (`lag_1w`) and the 4-week smoothed moving average (`rolling_mean_4w`) contribute over 80% of total predictive signal, with the seasonal flu indicator providing necessary adjustments during Q4 spikes.
 
----
+## Staffing Allocation Logic
 
-## 🏥 Operational Staffing Framework
+Predicted appointment numbers are mapped to staffing requirements using standard primary care operational ratios:
 
-To translate volume forecasts into actionable staffing rotas, the solution applies standardized healthcare workforce capacity formulas:
-
-### Staffing Formulas
-- **Doctor FTE Requirement**:
-  $$\text{Doctor FTE} = \left\lceil \frac{\text{Predicted Weekly Volume}}{40} \right\rceil$$
-  *Rationale*: A full-time primary care physician comfortably handles ~40 appointments per week (8 patient visits per day across a 5-day work week).
-- **Nurse FTE Requirement**:
+- Doctor Staffing:
+  $$\text{Doctor FTE} = \left\lceil \frac{\text{Forecasted Weekly Volume}}{40} \right\rceil$$
+  Each full-time physician is budgeted for approximately 40 appointments per week (8 appointments per day across a 5-day schedule).
+- Nurse Staffing:
   $$\text{Nurse FTE} = \left\lceil \text{Doctor FTE} \times 1.5 \right\rceil$$
-  *Rationale*: Outpatient clinical standards require 1.5 nurses per physician for intake, triage, vitals, vaccinations, and care coordination.
-- **Integer Ceiling Rounding (`np.ceil`)**:
-  Clinics schedule whole clinician shifts. Rounding up prevents provider shortages and prioritizes patient safety.
+  Assigned at 1.5 nurses per practicing physician for intake, triage, vaccination support, and post-visit documentation.
+- Rounding: The ceiling function is applied to allocate whole provider shifts, avoiding fractional scheduling that could compromise clinic floor coverage.
 
-### Capacity Alert Thresholds ($\pm 15\%$)
-- **Optimal Capacity ($\pm 15\%$)**: Forecasted demand matches scheduled capacity within safe operational margins. Achieved in **70.3% of clinic-weeks (45 out of 64)**.
-- **Overstaffed Alert ($> +15\%$)**: Forecast significantly exceeds patient arrivals (**20.3% of weeks**), indicating opportunities to reduce payroll waste or schedule administrative tasks.
-- **Understaffed Alert ($< -15\%$)**: Patient demand exceeds scheduled capacity (**9.4% of weeks**), providing an advance warning to activate float pool nurses and locum physicians.
+### Capacity Status Classification
 
----
+Weekly clinic schedules are classified based on the percentage deviation between forecasted and actual volume:
 
-## 📜 Production Governance & Model Refresh Protocol
+- Optimal Capacity (+/-15% variance): Achieved in 70.3% of holdout clinic-weeks (45 of 64). Demand and staffing remain balanced within safe operational tolerances.
+- Overstaffed Alert (> +15% forecast error): Observed in 20.3% of holdout weeks, predominantly during holiday dips. Provides an advance signal to adjust temporary provider hours.
+- Understaffed Alert (< -15% forecast error): Observed in 9.4% of holdout weeks, concentrated during rapid flu surge weeks. Serves as a prompt to mobilize float pool personnel.
 
-To mitigate model drift caused by demographic changes, new service lines, or epidemiological shifts, the following production governance rules are established:
+## Production Governance and Model Monitoring
 
-1. **Weekly Scoring Cadence**: Automated forecast generation runs every Sunday at 23:00 for the upcoming 4 calendar weeks.
-2. **Monthly Retraining Cadence**: Model parameters are re-fit on the 1st of every month incorporating the latest verified appointment logs.
-3. **Automated Drift Detection Rule**:
-   - An alert triggers immediate model retraining if the rolling forecast error exceeds an **18.0% MAPE ceiling for 3 consecutive weeks**.
-   - Requiring 3 consecutive breaches ensures that temporary operational anomalies (such as blizzard-related clinic closures) do not cause false retraining alarms.
+The system operates under a defined maintenance protocol:
 
----
+- Scoring Schedule: The forecasting pipeline executes every Sunday at 23:00 to generate volume and staffing projections for the upcoming 4-week planning window.
+- Retraining Schedule: Scheduled on the first calendar day of each month using all verified historical data up to that date.
+- Drift Detection Rule: Model errors are tracked on a rolling basis. If holdout MAPE exceeds 18.0% for three consecutive weeks, an automated retraining workflow is triggered. Single-week anomalies (such as weather disruptions) are ignored to avoid unnecessary model churn.
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 nexora_care_flow/
-├── README.md                                  # Project overview and executive summary (3rd person)
-├── STORYLINE.md                               # Complete data science narrative and business arc
+├── README.md
+├── STORYLINE.md
 ├── data/
 │   ├── raw/
-│   │   └── AppointmentRecords.csv             # Raw EHR appointment logs (129,353 records)
+│   │   └── AppointmentRecords.csv
 │   └── processed/
-│       ├── cleaned_appointments.csv           # Deduplicated, cleaned record-level data
-│       ├── daily_clinic_appointments.csv      # Daily appointment counts per clinic (2,924 rows)
-│       ├── weekly_clinic_appointments.csv     # Weekly aggregated appointment counts (420 rows)
-│       ├── weekly_features.csv                # 8 engineered time-series features (379 rows)
-│       ├── weekly_holdout_predictions.csv     # Model forecasts vs actuals on Q4 holdout (64 rows)
-│       └── staffing_guidance_holdout.csv      # Doctor/Nurse FTE rosters and capacity alerts
+│       ├── cleaned_appointments.csv
+│       ├── daily_clinic_appointments.csv
+│       ├── weekly_clinic_appointments.csv
+│       ├── weekly_features.csv
+│       ├── weekly_holdout_predictions.csv
+│       └── staffing_guidance_holdout.csv
 ├── model/
-│   ├── weekly_forecasting_model.pkl           # Serialized champion GradientBoostingRegressor
-│   └── evaluation_summary.json                # Benchmark metrics and feature contract
+│   ├── weekly_forecasting_model.pkl
+│   └── evaluation_summary.json
 └── notebooks/
-    ├── 01_data_cleaning.ipynb                 # Chapter 1: Ingestion, audit, and data hygiene
-    ├── 02_EDA.ipynb                           # Chapter 2: Exploratory analysis and demand discovery
-    ├── 03_feature_eng.ipynb                   # Chapter 3: Time-series feature engineering
-    ├── 04_model_development.ipynb            # Chapter 4: Model training, evaluation, and benchmarking
-    ├── 05_staffing_guidance.ipynb             # Chapter 5: Operational Doctor & Nurse FTE guidance
-    ├── 06_model_refresh_documentation.ipynb   # Chapter 6: Governance, drift monitoring, and handover
-    ├── production_architecture_flowchart.svg  # Vector architecture and governance flowchart
-    └── production_architecture_flowchart.png  # High-resolution rasterized flowchart
+    ├── 01_data_cleaning.ipynb
+    ├── 02_EDA.ipynb
+    ├── 03_feature_eng.ipynb
+    ├── 04_model_development.ipynb
+    ├── 05_staffing_guidance.ipynb
+    ├── 06_model_refresh_documentation.ipynb
+    ├── production_architecture_flowchart.svg
+    └── production_architecture_flowchart.png
 ```
 
----
+## Setup and Dependencies
 
-## 🚀 Getting Started & Execution Guide
+### Environment Requirements
 
-### Prerequisites
-- Python 3.10+ (tested on Python 3.14)
-- Standard data science libraries: `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `seaborn`, `joblib`
+- Python 3.10 or higher
+- Required packages: `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `seaborn`, `joblib`
 
 ### Installation
+
 ```bash
-# Clone the repository
 git clone https://github.com/earlchirchir/nexora_care_flow_forecast.git
 cd nexora_care_flow_forecast
-
-# Install required dependencies
 pip install pandas numpy scikit-learn matplotlib seaborn joblib
 ```
 
-### Running the Notebooks
-Execute the notebooks in sequential order (`01` through `06`):
+### Execution
+
+Notebooks can be run sequentially via Jupyter:
+
 ```bash
 jupyter notebook notebooks/01_data_cleaning.ipynb
 ```
-Each notebook is self-contained and pre-executed with rendered outputs, statistical tables, and visualization charts.
-
----
-
-## 👥 Project Information & Acknowledgements
-- **Author**: Earl Chirchir
-- **Curriculum**: Amdari Data Science Practical Syllabus (Weeks 2 – 4)
-- **Domain**: Healthcare Operations Management & Outpatient Clinical Workforce Analytics
-- **License**: MIT License
