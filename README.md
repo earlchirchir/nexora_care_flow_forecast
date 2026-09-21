@@ -15,8 +15,6 @@ The system processes 129,000+ Electronic Health Records (EHR) from 2024 through 
 
 The end-to-end pipeline consists of three core operational layers: data ingestion and transformation, predictive modeling, and operational staffing with governance monitoring.
 
-![Nexora Care Flow Production Architecture](notebooks/production_architecture_flowchart.svg)
-
 1. Data and Feature Layer:
    - Daily extraction and cleaning of appointment records from the central EHR database.
    - Aggregation into clinic-level daily (2,924 rows) and weekly (420 rows) time series.
